@@ -1,0 +1,174 @@
+/* styles.css */
+
+.home {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.task-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.line_through {
+  text-decoration: line-through;
+}
+
+.icon {
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+span {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  .home {
+    width: 80%;
+  }
+
+  .task-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checkbox, span {
+    margin: 5px 0;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .icon {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .input {
+    width: calc(100% - 110px); /* Adjust according to the button width */
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .task-wrapper {
+    padding: 8px;
+    margin: 8px 0;
+  }
+
+  .icon {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+/* Create component styles */
+
+.create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 250px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .create {
+    flex-direction: column;
+  }
+
+  .input, .button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .input {
+    width: calc(100% - 60px); /* Adjust according to the button width */
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
